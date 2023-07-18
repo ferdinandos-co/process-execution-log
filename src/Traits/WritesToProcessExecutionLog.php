@@ -2,7 +2,7 @@
 
 namespace FerdinandosCo\ProcessExecutionLog\Traits;
 
-use App\Models\ProcessExecutionLog;
+use FerdinandosCo\ProcessExecutionLog\Models\ProcessExecutionLog;
 
 trait WritesToProcessExecutionLog
 {
