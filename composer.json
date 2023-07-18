@@ -10,19 +10,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "FerdinandosCo\\ProcessExecutionLog\\ServiceProvider"
+                "FerdinandosCo\\ProcessExecutionLog\\ProcessExecutionLogServiceProvider"
             ]
         }
     }
 }
-
-"extra": {
-    "laravel": {
-        "providers": [
-            "FerdinandosCo\\ProcessExecutionLog\\ServiceProvider"
-        ],
-        "aliases": {
-            "ProcessExecutionLogger": "FerdinandosCo\\ ProcessExecutionLog\\Facade"
-        }
-    }
-},
