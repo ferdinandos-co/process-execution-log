@@ -9,7 +9,7 @@ Keep track of all your process executions and conveniently log all their activit
 You can install via composer:
 
 ```command
-composer require ferdinandos-co/process-execution-log
+composer require ferdinandos-co/process-execution-log dev-main
 ```
 
 Run the migrations.
