@@ -2,20 +2,25 @@
 
 namespace FerdinandosCo\ProcessExecutionLog\Services;
 
+use Illuminate\Support\Facades\Log;
+
 class ProcessExecutionLogger
 {
     public function info(string $message)
     {
-        // Implement your logic for logging info messages
+        // @Todo: Implement your logic for logging info messages
+        Log::info('ProcessExecutionLogger::info');
     }
 
     public function notice(string $message)
     {
-        // Implement your logic for logging notice messages
+        // @Todo: Implement your logic for logging notice messages
+        Log::info('ProcessExecutionLogger::notice');
     }
 
     public function error(string $message)
     {
-        // Implement your logic for logging error messages
+        // @Todo: Implement your logic for logging error messages
+        Log::info('ProcessExecutionLogger::error');
     }
 }
