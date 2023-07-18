@@ -1,0 +1,28 @@
+{
+    "name": "ferdinandos-co/process-execution-log",
+    "description": "A Laravel package that enables stack straced logging of classes like Jobs, Events, Controllers, Observers, and more.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "FerdinandosCo\\ ProcessExecutionLog\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FerdinandosCo\\ProcessExecutionLog\\ServiceProvider"
+            ]
+        }
+    }
+}
+
+"extra": {
+    "laravel": {
+        "providers": [
+            "FerdinandosCo\\ProcessExecutionLog\\ServiceProvider"
+        ],
+        "aliases": {
+            "ProcessExecutionLogger": "FerdinandosCo\\ ProcessExecutionLog\\Facade"
+        }
+    }
+},
