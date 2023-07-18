@@ -4,7 +4,8 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "FerdinandosCo\\ProcessExecutionLog\\": "src/"
+            "FerdinandosCo\\ProcessExecutionLog\\": "src/",
+            "FerdinandosCo\\ProcessExecutionLog\\Traits\\": "src/Traits/"
         }
     },
     "extra": {
