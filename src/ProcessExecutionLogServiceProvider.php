@@ -3,7 +3,6 @@
 namespace FerdinandosCo\ProcessExecutionLog;
 
 use Illuminate\Support\ServiceProvider;
-use FerdinandosCo\ProcessExecutionLog\Services\ProcessExecutionLogger;
 
 class ProcessExecutionLogServiceProvider extends ServiceProvider
 {
@@ -24,8 +23,6 @@ class ProcessExecutionLogServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('ProcessExecutionLogger', function ($app) {
-            return new ProcessExecutionLogger();
-        });
+        //...
     }
 }

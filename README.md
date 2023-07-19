@@ -37,13 +37,13 @@ use the ProcessExecutionLogger facade to add more in-depth logging.
 
 ```php
 // Write some info to the log
-ProcessExecutionLogger::info('Some info log.');
+$this->info('Some info log.');
 
 // Write a notice to the log
-ProcessExecutionLogger::notice('Some notice log.');
+$this->notice('Some notice log.');
 
 // Write an error to the log
-ProcessExecutionLogger::error('Some error log.');
+$this->error('Some error log.');
 ```
 
 You can access the model ProcessExecutionLog like this:

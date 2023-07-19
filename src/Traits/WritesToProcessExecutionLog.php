@@ -6,14 +6,16 @@ use FerdinandosCo\ProcessExecutionLog\Models\ProcessExecutionLog;
 
 trait WritesToProcessExecutionLog
 {
-    public $parentLog;
+    public $processExecutionLog;
 
-    public function setParentLog(ProcessExecutionLog $parentLog = null)
+    public function writeToProcessExecutionLog(ProcessExecutionLog $processExecutionLog = null, $details = null)
     {
-        $this->parentLog = $parentLog;
+        $this->processExecutionLog = $processExecutionLog;
+
+        $this->addToProcessExecutionLog($details);
     }
 
-    public function logExecution($details = null)
+    private function addToProcessExecutionLog($details = null)
     {
         $log = new ProcessExecutionLog();
 
@@ -35,14 +37,14 @@ trait WritesToProcessExecutionLog
 
         $log->details = $details;
 
-        if ($this->parentLog instanceof ProcessExecutionLog) {
-            $log->parent_id = $this->parentLog->id;
+        if ($this->processExecutionLog instanceof ProcessExecutionLog) {
+            $log->parent_id = $this->processExecutionLog->id;
         }
 
         $log->save();
 
         // Set the newly created log as the parent log for future executions
-        $this->parentLog = $log;
+        $this->processExecutionLog = $log;
     }
 
     protected function getExecutionType()
